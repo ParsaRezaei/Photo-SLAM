@@ -768,7 +768,7 @@ void GaussianMapper::trainForOneIteration()
         // Optimizer step
         if (getIteration() < opt_params_.iterations_) {
             gaussians_->optimizer_->step();
-            gaussians_->optimizer_->zero_grad(true);
+            gaussians_->optimizer_->zero_grad();
         }
     }
 }

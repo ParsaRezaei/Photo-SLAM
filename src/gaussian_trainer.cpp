@@ -128,7 +128,7 @@ void GaussianTrainer::trainingOnce(
             // Optimizer step
             if (iteration < opt.iterations_) {
                 gaussians->optimizer_->step();
-                gaussians->optimizer_->zero_grad(true);
+                gaussians->optimizer_->zero_grad();
             }
         }
     }
